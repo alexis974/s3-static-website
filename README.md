@@ -7,11 +7,11 @@ Exemple:
 
 ```hcl
 module "my_website" {
-  source = "../s3-static-website"
+  source = "github.com/alexis974/s3-static-website"
 
-  aws_region     = "eu-west-3"
-  domain_name    = "my_domain.fr"
-  subdomain_name = "my_subdomain"
-  website_prefix = "my_site"
+  aws_region       = "eu-west-3"
+  zone_name        = "my_domain.fr"
+  website_prefix   = "my_site."
+  default_document = "index.html"
 }
 ```
