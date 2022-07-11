@@ -21,7 +21,7 @@ resource "aws_cloudfront_distribution" "s3_website" {
 
   enabled             = true
   is_ipv6_enabled     = true
-  comment             = "SDI Main website"
+  comment             = var.cloudfront_description
   default_root_object = var.default_document
 
   aliases = [aws_s3_bucket.website.id]
