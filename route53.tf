@@ -4,7 +4,7 @@
 
 resource "aws_route53_record" "s3_website" {
   zone_id = data.aws_route53_zone.public_zone.zone_id
-  name    = "${var.website_prefix}.${var.subdomain_name}.${var.domain_name}"
+  name    = "${var.website_prefix}${var.zone_name}"
   type    = "A"
 
   alias {

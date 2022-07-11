@@ -6,13 +6,8 @@ variable "aws_region" {
   type = string
 }
 
-variable "domain_name" {
+variable "zone_name" {
   type = string
-}
-
-variable "subdomain_name" {
-  type    = string
-  default = "aws"
 }
 
 variable "website_prefix" {

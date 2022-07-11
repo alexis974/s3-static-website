@@ -6,7 +6,7 @@
 resource "aws_acm_certificate" "cert" {
   provider = aws.us_east_1
 
-  domain_name = "${var.website_prefix}.${var.subdomain_name}.${var.domain_name}"
+  domain_name = "${var.website_prefix}${var.zone_name}"
 
   validation_method = "DNS"
 

@@ -72,5 +72,5 @@ resource "aws_cloudfront_distribution" "s3_website" {
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
-  comment = "access-identity-${var.domain_name}.s3.amazonaws.com"
+  comment = "access-identity-${var.zone_name}.s3.amazonaws.com"
 }

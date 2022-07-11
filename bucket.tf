@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------- Bucket --- #
 
 resource "aws_s3_bucket" "website" {
-  bucket        = "${var.website_prefix}.${var.subdomain_name}.${var.domain_name}"
+  bucket        = "${var.website_prefix}${var.zone_name}"
   force_destroy = true
 
   tags = {
